@@ -1,0 +1,79 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+
+% a szép matematikai szimbólumokért
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+% eps formátumú ábrák --> pdflatex fordításhoz!!
+\usepackage{epsfig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{Bíró Gábor}
+
+\title{A kutatómunka információs eszközei}
+
+\begin{document}
+
+\begin{titlepage}   
+
+\maketitle
+
+\date
+
+\end{titlepage}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bevezetés}
+\label{sec:bev}
+Itt egy hangzatos bevezetés szerepel.
+
+\subsection{Egy alfejezet}
+\label{subsec:alfejezet}
+
+Ez meg egy alfejezet.
+
+\subsubsection{Alalfejezet}
+\label{subsubsec:alalfejezet}
+
+Ez pedig egy alalfejezet. Nevezetesen a \ref{sec:bev}. bevezetés után kezdődő \ref{subsec:alfejezet}. alfejezetnek az \ref{subsubsec:alalfejezet}. alalfejezete.
+
+\begin{equation}
+a+b=c
+  \label{eq:eq1}
+\end{equation}
+
+Ez volt az egyenlet. 
+
+\subsubsection{A \LaTeX\ dokumentum lefordítása}
+A fordításhoz végrehajtandó lépések:
+
+\begin{itemize}
+  \item[a)] van \textit{eps}-től eltérő képformátum (\textit{png, jpg} vagy más) a dokumentumban:
+  \begin{enumerate}
+    \item pdflatex fajlnev.tex
+    \item bibtex fajlnev.aux
+    \item pdflatex fajlnev.tex
+    \item pdflatex fajlnev.tex
+  \end{enumerate}
+  \item[b)] nincs \textit{eps}-től eltérő képformátum a dokumentumban:
+  \begin{enumerate}
+    \item latex fajlnev.tex
+    \item bibtex fajlnev.tex
+    \item latex fajlnev.tex
+    \item latex fajlnev.tex
+    \item dvipdf fajlnev.tex
+  \end{enumerate}
+  \item harmadik opció nincs. Ezzel csak demonstrálom, hogy mi az \texttt{itemize} alapértelmezett szimbóluma.
+\end{itemize}
+
+\end{document}
+
+Ez pedig már nem fog megjelenni, mivel az end document után vagyunk.
