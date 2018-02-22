@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -32,7 +32,9 @@ plt.ylabel("$dN_{ch}/d \eta_{Lab}$")
 axes.legend(bbox_to_anchor=(0.8, 0.6))
 
 fig.tight_layout()
-plt.show()
 
+# Ha a képet el akarod menteni, a show-t kommenteld ki!
+plt.show()
+####
 # fig.savefig("plot1.png")
 # plt.close(fig)
